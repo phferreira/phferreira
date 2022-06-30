@@ -1,0 +1,43 @@
+name: Build and push to phferreira.io
+
+on:
+  push:
+    branches: [ "master" ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # - uses: subosito/flutter-action@v2
+      #     with:
+      #       channel: 'stable'
+      - uses: dart-lang/setup-dart@v1.3
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: Analyze project source
+        run: dart analyze
+        
+      - name: Run tests
+        run: flutter test
+
+      - run: flutter config --enable-web
+      - run: flutter pub get
+      - run: flutter build web --release
+      - run: |
+         cd build/web
+         git init
+         git config --global user.email p.h.ferreirah@gmail.com
+         git config --global user.name phferreira
+         git status
+         git remote add origin https://${{secrets.commit_secret}}@github.com/phferreira/phferreira.github.io.git
+         git checkout -b gh-pages
+         git add --all
+         git commit -m "update"
+         git push origin gh-pages -f
