@@ -4,7 +4,11 @@ class MenuButtonWidget extends StatefulWidget {
   final String title;
   final VoidCallback onPressed;
 
-  const MenuButtonWidget({super.key, required this.title, required this.onPressed});
+  const MenuButtonWidget({
+    super.key,
+    required this.title,
+    required this.onPressed,
+  });
 
   @override
   _MenuButtonWidgetState createState() => _MenuButtonWidgetState();
