@@ -11,7 +11,7 @@ class MenuButtonWidget extends StatefulWidget {
   });
 
   @override
-  _MenuButtonWidgetState createState() => _MenuButtonWidgetState();
+  State<StatefulWidget> createState() => _MenuButtonWidgetState();
 }
 
 class _MenuButtonWidgetState extends State<MenuButtonWidget> {
