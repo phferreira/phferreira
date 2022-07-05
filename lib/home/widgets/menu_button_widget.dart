@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 
 class MenuButtonWidget extends StatefulWidget {
   final String title;
-  final VoidCallback onPressed;
+  final PageController controller;
+  final int page;
 
   const MenuButtonWidget({
     super.key,
     required this.title,
-    required this.onPressed,
+    required this.controller,
+    required this.page,
   });
 
   @override
@@ -19,7 +21,14 @@ class _MenuButtonWidgetState extends State<MenuButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: widget.onPressed,
+      onPressed: () {
+        widget.controller.animateToPage(
+          widget.page,
+          duration: const Duration(milliseconds: 900),
+          curve: Curves.decelerate,
+        );
+        setState(() {});
+      },
       child: Text(
         widget.title,
         style: TextStyle(
