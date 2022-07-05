@@ -38,5 +38,5 @@ jobs:
          git remote add origin https://${{secrets.commit_secret}}@github.com/phferreira/phferreira.github.io.git
          git checkout -b gh-pages
          git add --all
-         git commit -m "update"
+         git commit -m "Update from phferreira.git"
          git push origin gh-pages -f
