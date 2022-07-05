@@ -30,44 +30,28 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             MenuButtonWidget(
-                title: 'About',
-                onPressed: () {
-                  pageController.animateToPage(
-                    0,
-                    duration: const Duration(seconds: 1),
-                    curve: Curves.decelerate,
-                  );
-                }),
+              title: 'About',
+              page: 0,
+              controller: pageController,
+            ),
             SizedBox(width: MediaQuery.of(context).size.width * 0.05),
             MenuButtonWidget(
-                title: 'Experience',
-                onPressed: () {
-                  pageController.animateToPage(
-                    1,
-                    duration: const Duration(seconds: 1),
-                    curve: Curves.easeInOutExpo,
-                  );
-                }),
+              title: 'Experience',
+              page: 1,
+              controller: pageController,
+            ),
             SizedBox(width: MediaQuery.of(context).size.width * 0.05),
             MenuButtonWidget(
-                title: 'Work',
-                onPressed: () {
-                  pageController.animateToPage(
-                    2,
-                    duration: const Duration(seconds: 1),
-                    curve: Curves.easeOutSine,
-                  );
-                }),
+              title: 'Work',
+              page: 2,
+              controller: pageController,
+            ),
             SizedBox(width: MediaQuery.of(context).size.width * 0.05),
             MenuButtonWidget(
-                title: 'Contact',
-                onPressed: () {
-                  pageController.animateToPage(
-                    3,
-                    duration: const Duration(seconds: 1),
-                    curve: Curves.ease,
-                  );
-                }),
+              title: 'Contact',
+              page: 3,
+              controller: pageController,
+            ),
           ],
         ),
       ),
