@@ -34,10 +34,22 @@ class _HomePageState extends State<HomePage> {
             },
             labelType: NavigationRailLabelType.all,
             destinations: const [
-              NavigationRailDestination(icon: Icon(Icons.person), label: Text('About')),
-              NavigationRailDestination(icon: Icon(Icons.computer), label: Text('Experience')),
-              NavigationRailDestination(icon: Icon(Icons.work), label: Text('Work')),
-              NavigationRailDestination(icon: Icon(Icons.contacts), label: Text('Contact')),
+              NavigationRailDestination(
+                icon: Icon(Icons.person),
+                label: Text('About'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.computer),
+                label: Text('Experience'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.work),
+                label: Text('Work'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.contacts),
+                label: Text('Contact'),
+              ),
             ],
             selectedIndex: _selectedIndex,
             backgroundColor: Colors.black12,

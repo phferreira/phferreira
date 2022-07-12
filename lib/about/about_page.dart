@@ -48,25 +48,33 @@ class AboutPage extends StatelessWidget {
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: Image.asset('assets/images/icons/github_logo_256_black.png'),
+                    icon: Image.asset(
+                      'assets/images/icons/github_logo_256_black.png',
+                    ),
                     tooltip: 'GitHub',
                     iconSize: 32,
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Image.asset('assets/images/icons/linkedin_logo_256_black.png'),
+                    icon: Image.asset(
+                      'assets/images/icons/linkedin_logo_256_black.png',
+                    ),
                     tooltip: 'LinkedIn',
                     iconSize: 32,
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Image.asset('assets/images/icons/facebook_logo_256_black.png'),
+                    icon: Image.asset(
+                      'assets/images/icons/facebook_logo_256_black.png',
+                    ),
                     tooltip: 'Facebook',
                     iconSize: 32,
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Image.asset('assets/images/icons/discord_logo_256_black.png'),
+                    icon: Image.asset(
+                      'assets/images/icons/discord_logo_256_black.png',
+                    ),
                     tooltip: 'Discord',
                     iconSize: 32,
                   ),
