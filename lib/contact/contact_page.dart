@@ -12,7 +12,7 @@ class ContactPage extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         alignment: Alignment.center,
-        padding: EdgeInsets.all(25),
+        padding: const EdgeInsets.all(25),
         child: Container(
           height: 700,
           width: 700,

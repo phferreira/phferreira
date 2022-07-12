@@ -28,7 +28,7 @@ class AboutPage extends StatelessWidget {
                       fontSize: 64,
                     ),
                     children: [
-                      TextSpan(text: '\n'),
+                      const TextSpan(text: '\n'),
                       TextSpan(
                         text: 'Flutter developer',
                         style: GoogleFonts.pacifico(fontSize: 32),
