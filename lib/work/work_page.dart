@@ -7,6 +7,7 @@ class WorkPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.yellow,
+      height: MediaQuery.of(context).size.height,
     );
   }
 }
