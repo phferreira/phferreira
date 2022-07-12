@@ -12,43 +12,68 @@ class AboutPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(
-            height: 300,
+          Expanded(
+            flex: 1,
+            child: Container(height: 1),
           ),
-          FittedBox(
-            child: Text(
-              'Paulo Henrique Ferreira',
-              style: GoogleFonts.pacifico(
-                fontSize: 64,
+          Expanded(
+            flex: 8,
+            child: SizedBox(
+              width: 700,
+              child: FittedBox(
+                child: Text.rich(
+                  TextSpan(
+                    text: 'Paulo Henrique Ferreira',
+                    style: GoogleFonts.pacifico(
+                      fontSize: 64,
+                    ),
+                    children: [
+                      TextSpan(text: '\n'),
+                      TextSpan(
+                        text: 'Flutter developer',
+                        style: GoogleFonts.pacifico(fontSize: 32),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
           ),
-          const SizedBox(
-            height: 300,
-          ),
-          SizedBox(
-            width: 700,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Image.asset('assets/images/icons/github_logo.png'),
-                  tooltip: 'GitHub',
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Image.asset('assets/images/icons/linkedin_logo.png'),
-                  tooltip: 'LinkedIn',
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Image.asset('assets/images/icons/facebook_logo.png'),
-                  tooltip: 'Facebook',
-                ),
-              ],
+          Expanded(
+            flex: 2,
+            child: SizedBox(
+              width: 700,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Image.asset('assets/images/icons/github_logo_256_black.png'),
+                    tooltip: 'GitHub',
+                    iconSize: 32,
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Image.asset('assets/images/icons/linkedin_logo_256_black.png'),
+                    tooltip: 'LinkedIn',
+                    iconSize: 32,
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Image.asset('assets/images/icons/facebook_logo_256_black.png'),
+                    tooltip: 'Facebook',
+                    iconSize: 32,
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Image.asset('assets/images/icons/discord_logo_256_black.png'),
+                    tooltip: 'Discord',
+                    iconSize: 32,
+                  ),
+                ],
+              ),
             ),
-          )
+          ),
         ],
       ),
     );
