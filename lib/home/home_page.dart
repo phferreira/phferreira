@@ -57,6 +57,8 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: Scrollbar(
               thumbVisibility: true,
+              trackVisibility: true,
+              controller: pageController,
               child: PageView(
                 scrollDirection: Axis.vertical,
                 controller: pageController,
