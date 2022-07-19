@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:phferreira/contact/widgets/cursor_widget.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({super.key});
@@ -7,6 +8,7 @@ class ContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FittedBox(
+      fit: BoxFit.fill,
       child: Container(
         color: Colors.black26,
         height: MediaQuery.of(context).size.height,
@@ -159,8 +161,33 @@ class ContactPage extends StatelessWidget {
               ),
               Expanded(
                 child: Container(
-                  alignment: Alignment.center,
+                  alignment: Alignment.topLeft,
                   color: const Color(0xFF241F31),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Text.rich(
+                            TextSpan(
+                              text: '  1 ',
+                              style: TextStyle(
+                                color: Colors.white38,
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: 'Hello there!',
+                                  style: TextStyle(
+                                    color: Colors.white70,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          CursorWidget(),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
