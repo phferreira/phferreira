@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phferreira/about/widgets/word_animation_widget.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
@@ -11,32 +12,9 @@ class AboutPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Expanded(
-            flex: 1,
-            child: Container(height: 1),
-          ),
-          Expanded(
+          const Expanded(
             flex: 8,
-            child: SizedBox(
-              width: 700,
-              child: FittedBox(
-                child: Text.rich(
-                  TextSpan(
-                    text: 'Paulo Henrique Ferreira',
-                    style: GoogleFonts.pacifico(
-                      fontSize: 64,
-                    ),
-                    children: [
-                      const TextSpan(text: '\n'),
-                      TextSpan(
-                        text: 'Flutter developer',
-                        style: GoogleFonts.pacifico(fontSize: 32),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+            child: WordAnimationWidget(),
           ),
           Expanded(
             flex: 2,
