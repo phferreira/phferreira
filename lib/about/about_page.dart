@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
@@ -50,6 +49,7 @@ class AboutPage extends StatelessWidget {
                     onPressed: () {},
                     icon: Image.asset(
                       'assets/images/icons/github_logo_256_black.png',
+                      filterQuality: FilterQuality.medium,
                     ),
                     tooltip: 'GitHub',
                     iconSize: 32,
@@ -58,6 +58,7 @@ class AboutPage extends StatelessWidget {
                     onPressed: () {},
                     icon: Image.asset(
                       'assets/images/icons/linkedin_logo_256_black.png',
+                      filterQuality: FilterQuality.medium,
                     ),
                     tooltip: 'LinkedIn',
                     iconSize: 32,
@@ -66,6 +67,7 @@ class AboutPage extends StatelessWidget {
                     onPressed: () {},
                     icon: Image.asset(
                       'assets/images/icons/facebook_logo_256_black.png',
+                      filterQuality: FilterQuality.medium,
                     ),
                     tooltip: 'Facebook',
                     iconSize: 32,
@@ -74,6 +76,7 @@ class AboutPage extends StatelessWidget {
                     onPressed: () {},
                     icon: Image.asset(
                       'assets/images/icons/discord_logo_256_black.png',
+                      filterQuality: FilterQuality.medium,
                     ),
                     tooltip: 'Discord',
                     iconSize: 32,
