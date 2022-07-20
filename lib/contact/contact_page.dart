@@ -183,7 +183,10 @@ class ContactPage extends StatelessWidget {
                               ],
                             ),
                           ),
-                          CursorWidget(),
+                          CursorWidget(
+                            color: Colors.white60,
+                            size: 12,
+                          ),
                         ],
                       ),
                     ],

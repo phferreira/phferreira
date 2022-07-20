@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phferreira/about/widgets/cursor_digit_widget.dart';
+import 'package:phferreira/contact/widgets/cursor_widget.dart';
 
 class WordAnimationWidget extends StatefulWidget {
   const WordAnimationWidget({
@@ -64,6 +65,15 @@ class _WordAnimationWidgetState extends State<WordAnimationWidget> with TickerPr
                         end: (_name.length + (index + 1)) * _time,
                         fontSize: 18,
                       ),
+                    _animationController.isCompleted
+                        ? const FittedBox(
+                            fit: BoxFit.fill,
+                            child: CursorWidget(
+                              color: Colors.black54,
+                              size: 18,
+                            ),
+                          )
+                        : const SizedBox(width: 18 * 0.7),
                   ],
                 ),
               ),
@@ -87,6 +97,6 @@ class _WordAnimationWidgetState extends State<WordAnimationWidget> with TickerPr
       vsync: this,
       duration: const Duration(seconds: 3),
     );
-    _time = 1 / (_name.length + _subtitle.length);
+    _time = 1 / (_name.length + _subtitle.length + 1);
   }
 }
