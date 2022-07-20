@@ -30,8 +30,8 @@ class _WordAnimationWidgetState extends State<WordAnimationWidget> with TickerPr
                 width: 550,
                 height: 60,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Expanded(child: SizedBox()),
                     Row(
                       children: [
                         for (int index = 0; index < _name.length; index++)
@@ -44,7 +44,6 @@ class _WordAnimationWidgetState extends State<WordAnimationWidget> with TickerPr
                           ),
                       ],
                     ),
-                    const Expanded(child: SizedBox()),
                   ],
                 ),
               ),
@@ -55,8 +54,8 @@ class _WordAnimationWidgetState extends State<WordAnimationWidget> with TickerPr
                 width: 550,
                 height: 60,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Expanded(child: SizedBox()),
                     for (int index = 0; index < _subtitle.length; index++)
                       CursorDigitWidget(
                         letter: _subtitle[index],
@@ -65,7 +64,6 @@ class _WordAnimationWidgetState extends State<WordAnimationWidget> with TickerPr
                         end: (_name.length + (index + 1)) * _time,
                         fontSize: 18,
                       ),
-                    const Expanded(child: SizedBox()),
                   ],
                 ),
               ),
