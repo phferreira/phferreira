@@ -24,33 +24,51 @@ class _WordAnimationWidgetState extends State<WordAnimationWidget> with TickerPr
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              children: [
-                const Expanded(child: SizedBox()),
-                for (int index = 0; index < _name.length; index++)
-                  CursorDigitWidget(
-                    letter: _name[index],
-                    controller: _animationController,
-                    begin: index * _time,
-                    end: (index + 1) * _time,
-                    fontSize: 32,
-                  ),
-                const Expanded(child: SizedBox()),
-              ],
+            FittedBox(
+              fit: BoxFit.fill,
+              child: SizedBox(
+                width: 550,
+                height: 60,
+                child: Row(
+                  children: [
+                    const Expanded(child: SizedBox()),
+                    Row(
+                      children: [
+                        for (int index = 0; index < _name.length; index++)
+                          CursorDigitWidget(
+                            letter: _name[index],
+                            controller: _animationController,
+                            begin: index * _time,
+                            end: (index + 1) * _time,
+                            fontSize: 32,
+                          ),
+                      ],
+                    ),
+                    const Expanded(child: SizedBox()),
+                  ],
+                ),
+              ),
             ),
-            Row(
-              children: [
-                const Expanded(child: SizedBox()),
-                for (int index = 0; index < _subtitle.length; index++)
-                  CursorDigitWidget(
-                    letter: _subtitle[index],
-                    controller: _animationController,
-                    begin: (_name.length + index) * _time,
-                    end: (_name.length + (index + 1)) * _time,
-                    fontSize: 18,
-                  ),
-                const Expanded(child: SizedBox()),
-              ],
+            FittedBox(
+              fit: BoxFit.fill,
+              child: SizedBox(
+                width: 550,
+                height: 60,
+                child: Row(
+                  children: [
+                    const Expanded(child: SizedBox()),
+                    for (int index = 0; index < _subtitle.length; index++)
+                      CursorDigitWidget(
+                        letter: _subtitle[index],
+                        controller: _animationController,
+                        begin: (_name.length + index) * _time,
+                        end: (_name.length + (index + 1)) * _time,
+                        fontSize: 18,
+                      ),
+                    const Expanded(child: SizedBox()),
+                  ],
+                ),
+              ),
             ),
           ],
         );
