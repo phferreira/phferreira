@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CursorWidget extends StatefulWidget {
-  const CursorWidget({super.key});
+  const CursorWidget({
+    super.key,
+    required this.size,
+    required this.color,
+  });
+
+  final double size;
+  final Color color;
 
   @override
   State<CursorWidget> createState() => _CursorWidgetState();
@@ -16,7 +23,7 @@ class _CursorWidgetState extends State<CursorWidget> with SingleTickerProviderSt
     super.initState();
     _animation = AnimationController(vsync: this, duration: const Duration(seconds: 1));
     _animation.repeat();
-    _colorAnimation = ColorTween(begin: Colors.white70, end: Colors.transparent).animate(_animation);
+    _colorAnimation = ColorTween(begin: widget.color, end: Colors.transparent).animate(_animation);
     _animation.addListener(() {
       setState(() {});
     });
@@ -25,8 +32,8 @@ class _CursorWidgetState extends State<CursorWidget> with SingleTickerProviderSt
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 12,
-      width: 8,
+      height: widget.size * 1.2,
+      width: widget.size * 0.7,
       color: _colorAnimation.value,
     );
   }
