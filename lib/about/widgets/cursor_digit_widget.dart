@@ -55,7 +55,7 @@ class _CursorDigitWidgetState extends State<CursorDigitWidget> with TickerProvid
   Widget build(BuildContext context) {
     if (widget.controller.value < widget.begin) {
       return SizedBox(
-        height: widget.fontSize * 1.5,
+        height: widget.fontSize * 1.2,
         width: widget.fontSize * 0.7,
       );
     }
@@ -63,7 +63,7 @@ class _CursorDigitWidgetState extends State<CursorDigitWidget> with TickerProvid
       animation: widget.controller,
       builder: (BuildContext context, Widget? child) {
         return Container(
-          height: widget.fontSize * 1.5,
+          height: widget.fontSize * 1.2,
           width: widget.fontSize * 0.7,
           color: _animationColor.value,
           child: Text(
