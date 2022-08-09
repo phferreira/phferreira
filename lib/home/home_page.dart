@@ -13,7 +13,20 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  PageController pageController = PageController();
+  final PageController _pageController = PageController(
+    initialPage: 0,
+    keepPage: true,
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController.addListener(() {
+      setState(() {
+        _selectedIndex = _pageController.page!.toInt();
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +38,8 @@ class _HomePageState extends State<HomePage> {
             onDestinationSelected: (index) {
               setState(() {
                 _selectedIndex = index;
-                pageController.animateToPage(
-                  _selectedIndex,
+                _pageController.animateToPage(
+                  index,
                   duration: const Duration(seconds: 1),
                   curve: Curves.ease,
                 );
@@ -58,10 +71,10 @@ class _HomePageState extends State<HomePage> {
             child: Scrollbar(
               thumbVisibility: true,
               trackVisibility: true,
-              controller: pageController,
+              controller: _pageController,
               child: PageView(
                 scrollDirection: Axis.vertical,
-                controller: pageController,
+                controller: _pageController,
                 pageSnapping: false,
                 children: const [
                   AboutPage(),
@@ -79,12 +92,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
-    pageController.dispose();
+    _pageController.dispose();
     super.dispose();
-  }
-
-  @override
-  void initState() {
-    super.initState();
   }
 }
