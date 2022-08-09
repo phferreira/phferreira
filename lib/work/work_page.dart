@@ -5,9 +5,10 @@ class WorkPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.yellow,
-      height: MediaQuery.of(context).size.height,
+    return Scaffold(
+      body: Container(
+        color: Colors.black26,
+      ),
     );
   }
 }
