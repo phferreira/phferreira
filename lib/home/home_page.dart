@@ -13,6 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
+
   final PageController _pageController = PageController(
     initialPage: 0,
     keepPage: true,
@@ -26,6 +27,12 @@ class _HomePageState extends State<HomePage> {
         _selectedIndex = _pageController.page!.toInt();
       });
     });
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   @override
@@ -88,11 +95,5 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
   }
 }
