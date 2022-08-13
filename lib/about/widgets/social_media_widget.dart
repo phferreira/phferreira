@@ -1,4 +1,7 @@
+// ignore_for_file: avoid_web_libraries_in_flutter
+
 import 'package:flutter/material.dart';
+import 'dart:html' as html;
 
 class SocialMediaWidget extends StatelessWidget {
   const SocialMediaWidget({super.key});
@@ -11,7 +14,9 @@ class SocialMediaWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              html.window.open('https://github.com/phferreira', 'github');
+            },
             icon: Image.asset(
               'assets/images/icons/github_logo_256_black.png',
               filterQuality: FilterQuality.medium,
@@ -20,7 +25,9 @@ class SocialMediaWidget extends StatelessWidget {
             iconSize: 32,
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              html.window.open('https://www.linkedin.com/in/paulo-henrique-ferreira', 'linkedin');
+            },
             icon: Image.asset(
               'assets/images/icons/linkedin_logo_256_black.png',
               filterQuality: FilterQuality.medium,
@@ -29,7 +36,9 @@ class SocialMediaWidget extends StatelessWidget {
             iconSize: 32,
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              html.window.open('https://www.facebook.com/p.h.ferreirah', 'facebook');
+            },
             icon: Image.asset(
               'assets/images/icons/facebook_logo_256_black.png',
               filterQuality: FilterQuality.medium,
@@ -38,7 +47,9 @@ class SocialMediaWidget extends StatelessWidget {
             iconSize: 32,
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              html.window.open('https://discordapp.com/users/714523467235459173', 'discord');
+            },
             icon: Image.asset(
               'assets/images/icons/discord_logo_256_black.png',
               filterQuality: FilterQuality.medium,
