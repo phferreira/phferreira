@@ -10,7 +10,6 @@ class AboutPage extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       padding: const EdgeInsets.all(24),
-      color: Colors.black26,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [

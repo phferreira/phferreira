@@ -10,7 +10,6 @@ class ContactPage extends StatelessWidget {
     return FittedBox(
       fit: BoxFit.fill,
       child: Container(
-        color: Colors.black26,
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         alignment: Alignment.center,
