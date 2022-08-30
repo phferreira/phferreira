@@ -46,12 +46,6 @@ class _CursorDigitWidgetState extends State<CursorDigitWidget> with TickerProvid
   }
 
   @override
-  void dispose() {
-    widget.controller.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     if (widget.controller.value < widget.begin) {
       return SizedBox(
