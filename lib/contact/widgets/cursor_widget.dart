@@ -15,16 +15,22 @@ class CursorWidget extends StatefulWidget {
 }
 
 class _CursorWidgetState extends State<CursorWidget> with SingleTickerProviderStateMixin {
-  late AnimationController _animation;
+  late AnimationController _animationController;
   late Animation _colorAnimation;
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
 
   @override
   void initState() {
     super.initState();
-    _animation = AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    _animation.repeat();
-    _colorAnimation = ColorTween(begin: widget.color, end: Colors.transparent).animate(_animation);
-    _animation.addListener(() {
+    _animationController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    _animationController.repeat();
+    _colorAnimation = ColorTween(begin: widget.color, end: Colors.transparent).animate(_animationController);
+    _animationController.addListener(() {
       setState(() {});
     });
   }
