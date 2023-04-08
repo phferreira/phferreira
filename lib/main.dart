@@ -10,7 +10,7 @@ void main() {
       title: 'phferreira',
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
-        scaffoldBackgroundColor: const Color(0xFFF4F4F4),
+        scaffoldBackgroundColor: const Color(0xFFD1CDB2),
       ),
       home: const HomePage(),
     ),
