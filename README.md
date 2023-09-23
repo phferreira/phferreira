@@ -3,7 +3,7 @@
 
 
 - 🔭 I’m currently working on desktop development with delphi
-- 🌱 I’m currently learning Flutter/Dart, Clean Code, Clean Architecture, Unit Tests
+- 🌱 I’m currently learning Flutter/Dart, Bun, Clean Code, Clean Architecture, Unit Tests
 - 👯 I’m looking to collaborate on Flutter projects
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about ...
