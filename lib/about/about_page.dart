@@ -10,15 +10,15 @@ class AboutPage extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       padding: const EdgeInsets.all(24),
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           Expanded(
-            flex: 8,
+            flex: 13,
             child: WordAnimationWidget(),
           ),
           Expanded(
-            flex: 2,
+            flex: 1,
             child: SocialMediaWidget(),
           ),
         ],
