@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     _pageController.addListener(() {
       setState(() {
-        _selectedIndex = _pageController.page!.toInt();
+        _selectedIndex = _pageController.page!.round();
       });
     });
   }
