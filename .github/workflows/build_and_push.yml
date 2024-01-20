@@ -2,7 +2,7 @@ name: Build and push to phferreira.io
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
     
 jobs:
   build:
